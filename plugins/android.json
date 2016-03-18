@@ -1,0 +1,184 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "undefined": {
+                "parents": {
+                    "undefined": [
+                        {
+                            "xml": "<access origin=\"*.pushwoosh.com\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<permission android:name=\"io.cordova.prizepigs.permission.C2D_MESSAGE\" android:protectionLevel=\"signature\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"io.cordova.prizepigs.permission.C2D_MESSAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"com.google.android.c2dm.permission.RECEIVE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:maxSdkVersion=\"18\" android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application/activity": [
+                        {
+                            "xml": "<intent-filter><action android:name=\"io.cordova.prizepigs.MESSAGE\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter>",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:name=\"com.arellomobile.android.push.PushWebview\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:name=\"com.arellomobile.android.push.MessageActivity\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:name=\"com.arellomobile.android.push.PushHandlerActivity\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:label=\"@string/app_name\" android:name=\"com.facebook.LoginActivity\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"com.google.android.gcm.GCMBroadcastReceiver\" android:permission=\"com.google.android.c2dm.permission.SEND\"><intent-filter><action android:name=\"com.google.android.c2dm.intent.RECEIVE\" /><action android:name=\"com.google.android.c2dm.intent.REGISTRATION\" /><category android:name=\"io.cordova.prizepigs\" /></intent-filter></receiver>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.arellomobile.android.push.PushGCMIntentService\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.arellomobile.android.push.GeoLocationService\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"com.arellomobile.android.push.AlarmReceiver\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 2
+                        }
+                    ]
+                }
+            },
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"PushNotification\"><param name=\"android-package\" onload=\"true\" value=\"com.pushwoosh.plugin.pushnotifications.PushNotifications\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"UniversalAnalytics\"><param name=\"android-package\" value=\"com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.pushwoosh.plugins.pushwoosh": {
+            "PACKAGE_NAME": "io.cordova.prizepigs"
+        },
+        "nl.x-services.plugins.socialsharing": {
+            "PACKAGE_NAME": "io.cordova.prizepigs"
+        },
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "io.cordova.prizepigs"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "io.cordova.prizepigs"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "io.cordova.prizepigs"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "io.cordova.prizepigs"
+        },
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "io.cordova.prizepigs"
+        },
+        "com.danielcwilson.plugins.googleanalytics": {
+            "PACKAGE_NAME": "io.cordova.prizepigs"
+        },
+        "org.apache.cordova.network-information": {
+            "PACKAGE_NAME": "io.cordova.prizepigs"
+        }
+    },
+    "dependent_plugins": {}
+}

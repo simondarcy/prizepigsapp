@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.prizepigs" version="2.1.10" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <preference name="AllowInlineMediaPlayback" value="false" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="BackupWebStorage" value="cloud" />
+    <preference name="DisallowOverscroll" value="false" />
+    <preference name="EnableViewportScale" value="false" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value=".25" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="true" />
+    <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <preference name="ShowSplashScreenSpinner" value="true" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="TopActivityIndicator" value="gray" />
+    <preference name="GapBetweenPages" value="0" />
+    <preference name="PageLength" value="0" />
+    <preference name="PaginationBreakingMode" value="page" />
+    <preference name="PaginationMode" value="unpaginated" />
+    <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
+    </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="SocialSharing">
+        <param name="ios-package" value="SocialSharing" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
+    <feature name="PushNotification">
+        <param name="ios-package" value="PushNotification" />
+    </feature>
+    <feature name="UniversalAnalytics">
+        <param name="ios-package" value="UniversalAnalyticsPlugin" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="ios-package" value="CDVConnection" />
+    </feature>
+    <name>Prize Pigs</name>
+    <description>
+        Prize Pigs is Ireland's leading competition hub
+    </description>
+    <author email="sidarcy@gmail.com" href="http://oinkdigital.net">
+        Oink Digital
+    </author>
+    <content src="index.html" />
+    <access origin="localhost" />
+    <access origin="http://localhost" />
+    <access origin="*" />
+    <access origin="http://prizepigs.ie" />
+    <access origin="https://prizepigs.ie" />
+    <access origin="*.pushwoosh.com" />
+    <preference name="fullscreen" value="true" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="target-device" value="universal" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="show-splash-screen-spinner" value="false" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="orientation" value="portrait" />
+    <preference name="permissions" value="none" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.console" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="com.danielcwilson.plugins.googleanalytics" />
+    <gap:plugin name="com.pushwoosh.plugins.pushwoosh" />
+    <gap:plugin name="nl.x-services.plugins.socialsharing" source="plugins.cordova.io" />
+    <icon src="www/icon.png" />
+    <icon src="www/res/icon/ios/icon-60@2x.png" />
+    <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/ios/icon-40@2x.png" />
+    <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/ios/icon-40@2x.png" />
+    <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/icon/ios/icon-76@2x.png" />
+    <icon gap:platform="android" gap:qualifier="xhdpi" src="www/res/icon/ios/icon-76@2x.png" />
+    <icon gap:platform="ios" height="180" src="icon-60@3x.png" width="180" />
+    <icon gap:platform="ios" height="60" src="www/res/icon/ios/icon-60.png" width="60" />
+    <icon gap:platform="ios" height="120" src="www/res/icon/ios/icon-60@2x.png" width="120" />
+    <icon gap:platform="ios" height="76" src="www/res/icon/ios/icon-76.png" width="76" />
+    <icon gap:platform="ios" height="152" src="www/res/icon/ios/icon-76@2x.png" width="152" />
+    <icon gap:platform="ios" height="40" src="www/res/icon/ios/icon-40.png" width="40" />
+    <icon gap:platform="ios" height="80" src="www/res/icon/ios/icon-40@2x.png" width="80" />
+    <icon gap:platform="ios" height="57" src="www/res/icon/ios/icon.png" width="57" />
+    <icon gap:platform="ios" height="114" src="www/res/icon/ios/icon@2x.png" width="114" />
+    <icon gap:platform="ios" height="72" src="www/res/icon/ios/icon-72.png" width="72" />
+    <icon gap:platform="ios" height="144" src="www/res/icon/ios/icon-72@2x.png" width="144" />
+    <icon gap:platform="ios" height="29" src="www/res/icon/ios/icon-29.png" width="29" />
+    <icon gap:platform="ios" height="58" src="www/res/icon/ios/icon-29@2x.png" width="58" />
+    <icon gap:platform="ios" height="50" src="www/res/icon/ios/icon-50.png" width="50" />
+    <icon gap:platform="ios" height="100" src="www/res/icon/ios/icon-50@2x.png" width="100" />
+    <icon gap:platform="winphone" src="www/res/icon/ios/icon-76.png" />
+    <icon gap:platform="winphone" gap:role="background" src="www/res/icon/ios/icon-76@2x.png" />
+    <gap:splash src="res/screen/ios/Default-Portrait-736h@3x.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="www/res/screen/ios/Default-Portrait-736h@3x.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/res/screen/ios/Default-Portrait-736h@3x.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/res/screen/ios/Default-Portrait-736h@3x.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/res/screen/ios/Default-Portrait-736h@3x.png" />
+    <gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/Default.png" width="320" />
+    <gap:splash gap:platform="ios" height="960" src="www/res/screen/ios/Default@2x.png" width="640" />
+    <gap:splash gap:platform="ios" height="1136" src="www/res/screen/ios/Default-568h@2x.png" width="640" />
+    <gap:splash gap:platform="ios" height="1334" src="www/res/screen/ios/Default-667h@2x.png" width="750" />
+    <gap:splash gap:platform="ios" height="2208" src="www/res/screen/ios/Default-Portrait-736h@3x.png" width="1242" />
+    <gap:splash gap:platform="ios" height="1242" src="www/res/screen/ios/Default-Landscape-736h@3x.png" width="2208" />
+    <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/Default-Portrait.png" width="768" />
+    <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/Default-Landscape.png" width="1024" />
+    <gap:splash gap:platform="ios" height="2048" src="www/res/screen/ios/Default-Portrait@2x.png" width="1536" />
+    <gap:splash gap:platform="ios" height="1536" src="www/res/screen/ios/Default-Landscape@2x.png" width="2048" />
+    <gap:splash gap:platform="winphone" src="www/res/screen/ios/Default.png" />
+    <gap:config-file overwrite="true" parent="UIViewControllerBasedStatusBarAppearance" platform="ios">
+        <false />
+    </gap:config-file>
+</widget>

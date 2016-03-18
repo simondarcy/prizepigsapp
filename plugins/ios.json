@@ -1,0 +1,166 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "framework": {
+                "parents": {
+                    "CoreGraphics.framework": [
+                        {
+                            "xml": "false",
+                            "count": 2
+                        }
+                    ],
+                    "AudioToolbox.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "Social.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "MessageUI.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "Security.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "Storekit.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "CoreLocation.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "SystemConfiguration.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        },
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "CoreData.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "libz.dylib": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "libsqlite3.0.dylib": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"ios-package\" value=\"SocialSharing\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushNotification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"UniversalAnalytics\"><param name=\"ios-package\" value=\"UniversalAnalyticsPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "undefined": {
+                "parents": {
+                    "undefined": [
+                        {
+                            "xml": "<access origin=\"*.pushwoosh.com\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "nl.x-services.plugins.socialsharing": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "io.cordova.prizepigs"
+        },
+        "com.pushwoosh.plugins.pushwoosh": {
+            "PACKAGE_NAME": "io.cordova.prizepigs"
+        },
+        "com.danielcwilson.plugins.googleanalytics": {
+            "PACKAGE_NAME": "io.cordova.prizepigs"
+        },
+        "org.apache.cordova.network-information": {
+            "PACKAGE_NAME": "io.cordova.prizepigs"
+        }
+    },
+    "dependent_plugins": {}
+}
