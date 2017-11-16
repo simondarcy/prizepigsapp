@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="competition-list">
+        <div class="large-12 small-12 columns" ng-show="competitions.length==0">
+            <h3 class="page-header">
+                You are not entered in any running competitions.
+            </h3>
+        </div>
+        <div class="large-12 small-12 medium-12 columns competition" ng-repeat="competition in filtered = (competitions | filter:{ category: category })" data-rank="{{$index}} ">
+            <a ng-href="#/competition/{{ competition.id }}">
+                <img ng-src="{{ competition.image }}" pigimage/>
+                <h3>{{competition.title}}</h3>
+                <h6 class="subheader"><i class="fi-clock"></i> Ends {{ competition.enddate | humanDate }} <span class="entered" ng-show="competition.hasUserEntered"> Entered</span></h6>
+                <span class="pig-icon category-{{ competition.category }}"></span>
+            </a>
+            <hr/>
+        </div>
+    </div>
+</div>

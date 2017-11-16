@@ -1,0 +1,533 @@
+body, h1, h2, h3, h4, h5, h6{
+  font-family: Arial;
+}
+
+a, a:hover{
+  color:#d93b78;
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+a.f-icon{
+    background: #000000;
+    /*-webkit-tap-highlight-color:#d93b78;*/
+}
+.left-small, .right-small{
+    height: 5rem;
+    width: 3.5rem;
+}
+.left-off-canvas-toggle, .right-off-canvas-toggle{
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding-top: 1.1rem;
+    padding-left: 0.8rem;
+}
+.exit-off-canvas{
+    display: none;
+    background: red;
+    width: 100%;
+    height: 100%;
+    z-index: 9999!important;
+}
+.inner-wrap.move-left .exit-off-canvas, .inner-wrap.move-right .exit-off-canvas{
+    display: block;
+}
+
+fieldset{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+fieldset[ng-disabled=true], .enter-panel.loading-true{
+    opacity: 0.3;
+}
+/* foundation overrides */
+.tab-bar, .tab-bar-section{
+  height: 5rem;
+}
+.tab-bar, .left-off-canvas-menu, .right-off-canvas-menu{
+	background: #000;
+  z-index:9000;
+}
+ul.off-canvas-list li label{
+  background:#d93b78;
+  color:#000000;
+  border: none;
+}
+ul.off-canvas-list li a{
+  padding: 1.5rem 0.66667rem;
+  color:#FFFFFF;
+  border-bottom: 1px solid #d93b78;
+  font-size:1.2rem;
+  font-weight: bold;
+}
+ul.off-canvas-list li a.f-icon{
+    width: 33%;
+    float: left;
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+.category-menu ul.off-canvas-list li a{
+  padding-left:3rem;
+  background:url(../img/pig-icon-sprite.png) no-repeat 7px 13px;
+}
+.category-menu ul.off-canvas-list li a.category-entertainment{
+  background-position: 2px -471px;
+}
+.category-menu ul.off-canvas-list li a.category-sport{
+  background-position: 0px -268px;
+}
+.category-menu ul.off-canvas-list li a.category-food{
+  background-position: 7px -60px;
+}
+.category-menu ul.off-canvas-list li a.category-travel{
+  background-position: 6px -199px;
+}
+.category-menu ul.off-canvas-list li a.category-kids{
+  background-position: 4px -401px;
+}
+.category-menu ul.off-canvas-list li a.category-health{
+  background-position: 5px -334px;
+}
+.category-menu ul.off-canvas-list li a.category-electronics{
+  background-position: 6px -130px;
+}
+.tab-bar-section{
+	text-align: center;
+}
+.tab-bar-section img{
+    width: 50px;
+    margin-right: 4px;
+    height: 50px;
+    float: left;
+}
+.right-off-canvas-menu{
+    min-height: 500px;
+}
+.f-icon{
+  color: #FFFFFF;
+  font-size: 2.3rem;
+}
+.f-icon.fi-torso{
+    font-size: 2.5rem;
+}
+.f-icon:hover, .f-icon:visited{
+  color: #FFFFFF;
+}
+.meta:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.meta i{
+  display: block;
+  font-size: 3rem;
+  float: left;
+  color:#3b5998;
+  margin-right: 0.6rem;
+}
+.meta i.fi-social-twitter{
+  color:#00aced;
+}
+.meta i.fi-share{
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+    color: #000000;
+}
+.meta p.small{
+    font-size: 0.7rem;
+    text-align: center;
+}
+.meta.meta-bottom{
+    width: 8.4rem;
+    margin: 1rem auto 0;
+}
+.terms-bottom-link{
+    position: absolute;
+    bottom: 1rem;
+    margin: 0;
+    width: 100%;
+    color: #d93b78;
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+}
+button, .button{
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
+    background: #d93b78!important;
+    color: #FFFFFF;
+    display: block;
+    margin: 1rem auto auto auto;
+    width:100%;
+    -webkit-tap-highlight-color:green;
+}
+button:hover, .button:hover{
+    opacity: .7;
+}
+/* disable hover effect on mobile devices */
+html.touch button:hover, html.touch .button:hover{
+    opacity: 1;
+}
+/* stop header jumping with  off canvas menu */
+article {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+article,
+body,
+html,
+.off-canvas-wrap, 
+.off-canvas-wrap .inner-wrap,
+.row {
+    height: 100%;
+    width: 100%;
+}
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.entered{
+    color:green;
+}
+/* loader */
+.spinner {
+  position: relative;
+  top: 7rem;
+  margin:auto;
+  width: 70px;
+  z-index: 1000;
+  text-align: center;
+  color:#d93b78;
+}
+.spinner:after {
+    content: "Loading";
+    display: block;
+    font-weight: bold;
+    padding-top: 1rem;
+    font-size: 1rem;
+}
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #d93b78;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+/* end loader */
+
+/* global */
+
+.no-pad-right {
+  padding-right: 0;
+}
+.no-pad-left{
+  padding-left: 0;
+}
+input.ng-invalid {
+  border: 1px solid #d93b78;
+}
+input.ng-valid {
+  border: 1px solid #00ff11;
+}
+.app{
+    background: #FFF;
+    position: absolute;;
+    padding-bottom: 2rem;
+    padding-top:5rem;
+    -webkit-backface-visibility:hidden;
+}
+.app.loading-true *{
+  display:none;
+}
+.hidden{
+    display: none;
+}
+.main-logo{
+  background: url('../img/logo-1.png') no-repeat 0 0;
+  background-size: 134px 80px;
+  display: block;
+  width: 130px;
+  height: 100%;
+  margin:0 auto;
+}
+.footer{
+    color: #FFFFFF;
+    background: #000000;
+    margin-top: 1rem;
+}
+.footer p{
+    margin:0;
+    text-align: center;
+    padding: 1rem 0;
+    font-size:0.9rem;
+}
+.title {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.message{
+    text-align: center;
+    padding: 0.2rem;
+    border: 1px solid;
+    width: 60%;
+    margin: 0.5rem auto;
+    background: #d93b78;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+.modal-link{
+    color: #d93b78;
+    text-align: center;
+    margin-top: 1rem;
+    display: block;
+    cursor:pointer;
+}
+.close-modal{
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+.centered{
+  text-align: center;
+}
+/* comp list */
+.competition{
+    margin-top: 0.9375rem;
+}
+.pig-icon{
+  position: absolute;
+  bottom: 0.7375rem;
+  right: 1.2rem;
+  display: block;
+  width: 30px;
+  height: 52px;
+  background: url(../img/pig-icon-sprite.png) no-repeat;
+}
+.pig-icon.category-entertainment{
+  background-position: 0 -482px;
+  width: 39px;
+}
+.pig-icon.category-sport{
+  background-position: 0 -280px;
+  width: 51px;
+}
+.pig-icon.category-food{
+  background-position: 0 -72px;
+  width: 32px;
+}
+.pig-icon.category-travel{
+  background-position: 0 -210px;
+  width: 32px;
+}
+.pig-icon.category-kids{
+  background-position: 0 -415px;
+  width: 35px;
+}
+.pig-icon.category-health{
+  background-position: 0 -346px;
+  width: 33px;
+}
+.pig-icon.category-electronics{
+  background-position: 0 -139px;
+  width: 39px;
+}
+.competition img{
+    width: 100%;
+    height: 100%;
+    background: #f9f9f9;
+    min-height: 194px;
+}
+/* weird bug with low spec android*/
+body.android .competition img{
+    height: 194px;
+    max-height: 194px;
+}
+.competition .subheader{
+    color: #d93b78;
+    font-weight: bold;
+}
+button.green{
+    background: #4cd964!important;
+}
+.comp-image{
+    display: block;
+    width: 100%;
+    min-height: 12rem;
+    position: relative;
+    background-size: cover!important;
+    background-repeat: no-repeat;
+}
+.comp-image h4{
+    position: absolute;
+    bottom: 0.4rem;
+    left: 0;
+    background: #FFFFFF;
+    padding: 0.2rem 0.4rem;
+    font-weight: bold;
+    max-width: 17rem;
+}
+.competition h3, .page h3{
+    font-weight: bold;
+    margin: 0.3rem 0 0;
+    position: relative;
+}
+.competition-list .competition .subheader{
+    margin:0;
+}
+.competition-list .competition hr{
+    margin-bottom: 0;
+    margin-top:0.7375rem;
+    border: solid #B2AFAF;
+    border-width: 1px 0 0;
+}
+.competition-list .competition p{
+    margin:0;
+}
+.hide-when-logged-out, .hide-when-logged-in{
+    display: none;
+}
+/* competition detail */
+.excerpt{
+    margin-top: .4rem;
+    font-weight: bold;
+}
+/* form */
+#dob-input{
+    margin-top: 0.2rem;
+}
+#captcha-input{
+    margin-bottom: 0;
+}
+#captcha{
+    margin: 0.5rem 0;
+}
+#answer-form{
+    max-width: 300px;
+    margin: auto;
+}
+#answer-form p{
+    margin-left: 0;
+}
+h3.page-header{
+    text-align: center;
+    color:#d93b78;
+    margin:.5rem 0;
+}
+/* pages */
+.page p.title{
+    color:#d93b78;
+    font-weight: bold;
+    margin: 0;
+}
+.page h3{
+    margin: 0.8rem 0;
+    font-size: 1.5rem;
+}
+.page p{
+    margin-bottom: 0.8rem;
+}
+.app.ng-leave  { z-index:8888; }
+.app.ng-enter  { z-index:7777; }
+/* competition ------------------------ */
+body.animate .app.ng-leave{
+   -webkit-animation:slideOutLeft 0.5s both ease-in;
+  -moz-animation:slideOutLeft 0.5s both ease-in;
+  animation:slideOutLeft 0.5s both ease-in;
+}
+body.animate .app.ng-enter{
+   -webkit-animation:slideInRight 0.5s both ease-in;
+  -moz-animation:slideInRight 0.5s both ease-in;
+  animation:slideInRight 0.5s both ease-in;
+}
+/* Begin animations */
+/* slide in from the right */
+@keyframes slideInRight {
+  from  { transform:translateX(100%); }
+  to    { transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+  from  { -moz-transform:translateX(100%); }
+  to    { -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+  from  { -webkit-transform:translateX(100%); }
+  to    { -webkit-transform: translateX(0); }
+}
+@keyframes slideOutLeft {
+  to    { transform: translateX(-100%); }
+}
+@-moz-keyframes slideOutLeft {
+  to    { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes slideOutLeft {
+  to    { -webkit-transform: translateX(-100%); }
+}
+/* end animations */
+
+/* RWD media queries */
+
+/**/
+
+@media only screen and (min-width: 40.063em) and (max-width: 64.063em) {
+    /* bug on low spec android tablets */
+    body.android .competition img{
+        height: 255px;
+        max-height: 255px;
+    }
+}
+
+/* medium up */
+@media only screen and (min-width: 40.063em) {
+    .competition img{
+        min-width: 500px;
+        min-height: 323px;
+    }
+    /* bug on low spec android tablets */
+    body.android .competition img{
+        height: 323px;
+        max-height: 323px;
+    }
+}
+
+
